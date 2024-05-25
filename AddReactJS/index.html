@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    // import React from 'react';
+    //DOM
+    /* const h1DOM = document.createElement('h1');
+
+    h1DOM.title = 'Hello';
+    h1DOM.className = 'heading';
+
+    h1DOM.innerText = 'Hello F8';
+
+    document.body.appendChild(h1DOM); */
+
+    // React
+    // React.createElement(type, props, children, n)
+    /* const h1React = React.createElement('h1', {
+        title: 'Hello',
+        className: 'heading' 
+    }, 'Hello guys!', 'hello');
+    console.dir(h1React);
+
+    // React nested
+    const h1React1 = React.createElement(
+        'ul',
+        null,
+        React.createElement('li', null, "JavaScript"),
+        React.createElement('li', null, "React"));
+    console.dir(h1React1); */
+
+    // Ex3:
+    /* const courses = [
+        {
+            name: "HTML, CSS"
+        },
+        {
+            name: "Responsive web design"
+        },
+        {
+            name: "ReactJS"
+        }
+    ]
+
+    const ul = <ul>
+        {courses.map((course, index) => {
+            return <li key={index}>{course.name}</li>
+        })}
+    </ul>
+
+    const domContainer = document.querySelector('#root');
+    const root = ReactDOM.createRoot(domContainer);
+    root.render(ul); */
+
+    let fruits = ["Orange", "Banana", "Apple", "Lemon"];
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    root.render(
+        <div>
+            {fruits.map(it => (
+                <p>{it}</p>
+            ))}
+        </div>
+    );
+
+</script>
+
+</html>

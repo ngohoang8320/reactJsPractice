@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<!-- Vd 1: -->
+<!-- <script type="text/babel">
+
+    const Form = {
+        Input() {
+            return <input />
+        },
+        CheckBox() {
+            return <input type="CheckBox" />
+        }
+    }
+
+    function App() {
+
+        const type = 'CheckBox';
+
+        const Component = Form[type];
+
+        return (
+            <React.Fragment>
+                <Component />
+            </React.Fragment>
+        )
+    }
+
+    ReactDOM.render(<App />, document.querySelector('#root'));
+</script> -->
+
+<!-- Vd 2: -->
+<script type="text/babel">
+
+    const Form = {
+        Input() {
+            return <input />
+        },
+        CheckBox() {
+            return <input type="CheckBox" />
+        }
+    }
+
+    function App() {
+
+        const type = 'CheckBox';
+
+        const Component = Form[type];
+
+        return (
+            <React.Fragment>
+                <Component />
+            </React.Fragment>
+        )
+    }
+
+    ReactDOM.render(<App />, document.querySelector('#root'));
+</script>
+
+</html>
